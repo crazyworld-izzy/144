@@ -3,7 +3,7 @@ from pyrogram import filters
 import random
 from AmritaXMusic import app
 
-@app.on_message(filters.command(["gm", "goodmorning", "good morning"], prefixes=["/", "g", "G"]))
+@app.on_message(filters.command(["gm", "goodmorning", "good morning"], prefixes=["g", "G"]))
 async def goodmorning_command_handler(_, message):
     sender = message.from_user.mention
     send_sticker = random.choice([True, False])
