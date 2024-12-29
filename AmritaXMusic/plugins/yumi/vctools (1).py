@@ -2,29 +2,31 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from AmritaXMusic import app
 from config import OWNER_ID
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
 # vc on
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-    await msg.reply("**😍ᴠɪᴅᴇᴏ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ🥳**")
-
+       await msg.reply("ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ")
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-    await msg.reply("**😕ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ💔**")
+       await msg.reply("**ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴇɴᴅᴇᴅ**")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
-def handle_video_chat_members_invited(client, message):
-    text = f"*  {message.from_user.mention}\n\n**ɪɴᴠɪᴛɪɴɢ ɪɴ ᴠᴄ ᴛᴏ**\n\n**🍷 **"
-    x = 0
-    for user in message.video_chat_members_invited.users:
-        try:
-            text += f"[{user.first_name}](tg://user?id={user.id}) "
-            x += 1
-        except Exception:
-            pass
+async def brah3(app :app, message:Message):
+           text = f"{message.from_user.mention} ɪɴᴠɪᴛᴇᴅ "
+           x = 0
+           for user in message.video_chat_members_invited.users:
+             try:
+               text += f"[{user.first_name}](tg://user?id={user.id}) "
+               x += 1
+             except Exception:
+               pass
+           try:
+             await message.reply(f"{text} 😉")
+           except:
+             pass
+
 
 ####
 
@@ -37,6 +39,17 @@ def calculate_math(client, message):
     except:
         response = "ɪɴᴠᴀʟɪᴅ ᴇxᴘʀᴇssɪᴏɴ"
     message.reply(response)
+
+###
+@app.on_message(filters.command("leavegroup")& filters.user(OWNER_ID))
+async def bot_leave(_, message):
+    chat_id = message.chat.id
+    text = f"sᴜᴄᴄᴇssғᴜʟʟʏ   ʟᴇғᴛ  !!."
+    await message.reply_text(text)
+    await app.leave_chat(chat_id=chat_id, delete=True)
+
+
+####
 
 
 @app.on_message(filters.command(["spg"], ["/", "!", "."]))
@@ -66,3 +79,4 @@ async def search(event):
             prev_and_next_btns = [Button.inline("▶️Next▶️", data=f"next {start+10} {event.text.split()[1]}")]
             await msg.edit(result, link_preview=False, buttons=prev_and_next_btns)
             await session.close()
+            
