@@ -11,7 +11,7 @@ API_ID = "24600892"
 API_HASH = "6db6c1342cb6f10ab6ec4ce27e50cfd2"
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "7788838360:AAFbtcOHOiLJKvQYelMc3ZYGsFbpRpcti-o"
+BOT_TOKEN = "7788838360:AAFmOjFvgo9Cu7TEdZ2-FRu8JQr09K8F42E"
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","OwnerofTheDenki")
 # --------------------------------------------------------
@@ -22,7 +22,7 @@ BOT_NAME = getenv("𝟷𝟺𝟺 ᴍᴜsɪᴄ 🎶 ʙᴏᴛ")
 
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = "mongodb+srv://ftyvfbgubhu7:hDZwwlNzlKBzls84@ameliamusicbot.f7dzw.mongodb.net/?retryWrites=true&w=majority&appName=AmeliaMusicbot"
+MONGO_DB_URI = "mongodb+srv://architect04:architect04@cluster0.fylqb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 
@@ -74,7 +74,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 9073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = "BQEzJn8AVOMYAeSvbBtFyKmcHqgoq9ys63p3UQiNOngUONFiNq9a6l2Y1Ua6a2gV9SLXRjQOS0MLrLScY-IMuT1jzca4UCgaXnl6NRz3qnke9U5t6-RM2jAJz9-9_1iMfpxuDUdJP58ENdBHUff-8RneL_TyKfUaezAP2wmn_DnSmOtsc02tzuBdpFaJnSDBrN2KwZRSFRc3ctRT0jM_mrmlAZWYQCb0UA-fCOojWVBWSFGmmQc3R_3QesU3YWK_ekY0kGMVC_Pg3F_iUuSO2WpKwuZR2JHdX1oGVRVKCYzLAHxizIimbk48hJ7eN5FGLL6ZX8kLSsRNafuOu3KajMnx0TuiLgAAAAGXhdLRAA"
+STRING1 = "BQFh9vgABNh9HVokbLwjMUsRID5wTWexHXJPJtRFEw5vZ7PCCzG23s_p42XLFCrP7QM-z3XpykHYqMNJzmuKZmuLg0auYB67W6_l6WJLrvTZp_CgKp-t-1BqK097O3hPI-Zq0O5aplIy_K8OpB8jWf2hXXdQIwkL3-y4Dz1PaTmp1QzBFYR1j9VjvIKrLrDbf-H4giTTgRMKjHIBaRhn0pK3hkLvkXwiaNpr_gru0hO6U_6R16HKvuj5Q4Z04XD3ptkTPDqiRhc3mvSJ1Ckp-iDeiIh1W83aevqnS9-5z-myuZwWUJFtSP0_SHSozezbQuWz1W2GAgjc3wcGbCqMoAMybNfYoAAAAAHDL50SAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
