@@ -7,7 +7,7 @@ from config import OWNER_ID
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
 from pyrogram.raw.types import InputGroupCall
-from BrandrdXMusic.utils.database import get_assistant
+from AmritaXMusic.utils.database import get_assistant
 from telethon.tl.functions.phone import (
     CreateGroupCallRequest,
     DiscardGroupCallRequest,
